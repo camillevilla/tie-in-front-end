@@ -60,7 +60,7 @@ var UserList = React.createClass({
 // export default App;
 
 ReactDOM.render(
-  <UserList  url='http://tie-in.herokuapp.com/users' />,
+  <UserList  url='http://localhost:3000/users' />,
   document.getElementById('root')
 )
 ;
