@@ -1,8 +1,11 @@
 const React = require('react')
-const ReactDOM = require('react')
 const $ = require('jquery')
 
-const Accommodations = React.createClass({
+import './App.css'
+
+const URL = "http://localhost:3000/"
+
+export default React.createClass({
   getInitialState () {
     return {
       data: []
@@ -10,13 +13,13 @@ const Accommodations = React.createClass({
   },
   loadAccommodationsFromServer: function() {
     $.ajax({
-      url: this.props.url,
+      url: URL + "accommodations",
       dataType: 'json',
       success: function(data) {
         this.setState({data: data});
       }.bind(this),
-      error: function(xhr, status, error) {
-        console.error(this.props.url, status, error.toString());
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
   },
@@ -30,9 +33,14 @@ const Accommodations = React.createClass({
         </li>
       );
     })
+    return (
+      <div>
+        <h1>Accommodations</h1>
+        <ul>
+          {accommodationNodes}
+        </ul>
+      </div>
+    )
   }
 });
 
-ReactDOM.render(
-  <Accommodations url='http://localhost:3000/accommodations' />, document.getElementById('root')
-)

@@ -9,8 +9,8 @@ import './index.css';
 render((
   <Router history={browserHistory}>
     <Route path="/" component={Users}>
-      <Route path="/users" component={Users}/>
-      <Route path="/accommodations" component={Accommodations}/>
+      <Route path="/users" component={Users} />
+      <Route path="/accommodations" component={Accommodations} />
     </Route>
   </Router>
 ), document.getElementById('root'))
