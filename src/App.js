@@ -17,6 +17,7 @@ export default React.createClass({
           <li><Link to="/accommodations">Accommodations List</Link></li>
           // need to figure out how to interpolate current_user id later. see helpers
           <li><Link to="/users/:id/friends">All Friends</Link></li>
+          <li><Link to="/events">Events List</Link></li>
         </ul>
       </div>
     )
