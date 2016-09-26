@@ -3,10 +3,12 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 // import App from './App';
 import Users from './Users';
+import Friends from './friendsShow';
 import './index.css';
 
 render((
   <Router history={browserHistory}>
+  	<Route path="/users/:id/friends" component={Friends}/>
     <Route path="/" component={Users}>
       <Route path="/users" component={Users}/>
     </Route>
