@@ -14,7 +14,7 @@ export default React.createClass({
   },
   loadTripsFromServer: function() {
     $.ajax({
-      url: URL + "user/" + this.props.params.id + "/trips",
+      url: URL + "users/" + this.props.params.id + "/trips",
       dataType: 'json',
       success: function(data) {
         this.setState({data: data});
@@ -43,6 +43,7 @@ export default React.createClass({
         <ul>
           {tripNodes}
         </ul>
+        {this.props.children}
       </div>
     );
   }

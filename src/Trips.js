@@ -43,6 +43,7 @@ export default React.createClass({
         <ul>
           {tripNodes}
         </ul>
+        {this.props.children}
       </div>
     );
   }

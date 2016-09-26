@@ -8,18 +8,23 @@ import Friends from './friendsShow';
 import AddTrip from './AddTrip';
 import Accommodations from './Accommodations';
 import Events from './Events';
+// import CurrentUser from './CurrentUser';
 import './index.css';
 
+
 render((
-  <Router history={browserHistory}>
-  	<Route path="/users/1/friendships" component={Friends}/>
-    <Route path="/users" component={Users}/>
-    <Route path="/user/:id/trips" component={UserTrips}/>
-    <Route path="/user/:id/trips/new" component={AddTrip}/>
-    <Route path="/" component={App} />
-    <Route path="/accommodations" component={Accommodations} />
-    <Route path="/events" component={Events} />
-  </Router>
+  <div>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <Route path="/users" component={Users} />
+        <Route path="/user/:id/trips" component={UserTrips}/>
+        <Route path="/user/:id/trips/new" component={AddTrip}/>
+        <Route path="/accommodations" component={Accommodations} />
+        <Route path="/events" component={Events} />
+        <Route path="/users/1/friendships" component={Friends}/>
+      </Route>
+    </Router>
+  </div>
 ), document.getElementById('root'))
 
 
