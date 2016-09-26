@@ -18,5 +18,4 @@ export default React.createClass({
   }
 });
 
-// export default App;
 
