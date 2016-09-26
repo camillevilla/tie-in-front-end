@@ -1,4 +1,5 @@
 const React = require('react')
+const ReactDOM = require('react')
 const $ = require('jquery')
 
 const Accommodations = React.createClass({

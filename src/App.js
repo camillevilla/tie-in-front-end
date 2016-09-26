@@ -11,6 +11,7 @@ export default React.createClass({
         <h1>Welcome to Tie-In</h1>
         <ul>
           <li><Link to="/users">User List</Link></li>
+          <li><Link to="/accommodations">Accommodations List</Link></li>
 
         </ul>
       </div>
