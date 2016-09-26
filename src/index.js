@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import App from './App';
 import Users from './Users';
-// import Trips from './Trips';
 import UserTrips from './UserTrips';
+import Friends from './friendsShow';
 import AddTrip from './AddTrip';
 import Accommodations from './Accommodations';
 import Events from './Events';
@@ -21,6 +21,7 @@ render((
         <Route path="/user/:id/trips/new" component={AddTrip}/>
         <Route path="/accommodations" component={Accommodations} />
         <Route path="/events" component={Events} />
+        <Route path="/users/1/friendships" component={Friends}/>
       </Route>
     </Router>
   </div>

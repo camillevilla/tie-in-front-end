@@ -16,6 +16,7 @@ export default React.createClass({
           <li><Link to="/user/1/trips">Your Trips</Link></li>
           <li><Link to="/user/1/trips/new">Add Trip</Link></li>
           <li><Link to="/accommodations">Accommodations List</Link></li>
+          <li><Link to="/users/:id/friends">All Friends</Link></li>
           <li><Link to="/events">Events List</Link></li>
         </ul>
         {this.props.children}
