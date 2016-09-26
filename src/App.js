@@ -11,9 +11,9 @@ export default React.createClass({
       <div>
         <h1>Welcome to Tie-In</h1>
         <ul>
-          <li><Link to="/users">User List</Link></li>
+          <li><Link to="/user/:id/trips">Your Trips</Link></li>
           <li><Link to="/trips">All Trips</Link></li>
-          <li><Link to="/trips/new">Add Trip</Link></li>
+          <li><Link to="/user/:id/trips/new">Add Trip</Link></li>
           <li><Link to="/accommodations">Accommodations List</Link></li>
           <li><Link to="/events">Events List</Link></li>
         </ul>
