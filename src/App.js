@@ -7,6 +7,7 @@ import './App.css';
 
 export default React.createClass({
   render() {
+    return (
       <div>
         <h1>Welcome to Tie-In</h1>
         <ul>
@@ -15,6 +16,7 @@ export default React.createClass({
 
         </ul>
       </div>
+    )
   }
 });
 

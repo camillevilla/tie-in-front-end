@@ -8,10 +8,10 @@ import './index.css';
 
 render((
   <Router history={browserHistory} >
-    <Route path="/" component={App}>
-      <Route path="/users" component={Users} />
-      <Route path="/accommodations" component={Accommodations} />
-    </Route>
+    <Route path="/" component={App} />
+    <Route path="/users" component={Users} />
+    <Route path="/accommodations" component={Accommodations} />
+
   </Router>
 ), document.getElementById('root'))
 
