@@ -29,7 +29,7 @@ export default React.createClass({
   render() {
     const eventNodes = this.state.data.map(function(event) {
       return (
-        <li key={event.id}>{event.name}, {event.description} Created by: {event.creator_id} | Trip: {event.trip_id} | Location: {event.location} | Starts at: {event.start_time} | Ends at: {event.end_time}
+        <li key={event.id}>{event.name}, Description: {event.description} | Created by: {event.creator_first_name} {event.creator_last_name} | Trip: {event.trip_name} | Location: {event.location} | Starts at: {event.start_time} | Ends at: {event.end_time}
         </li>
       );
     })
