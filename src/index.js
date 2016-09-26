@@ -6,6 +6,7 @@ import Users from './Users';
 import Trips from './Trips';
 import AddTrip from './AddTrip';
 import Accommodations from './Accommodations';
+import Events from './Events';
 import './index.css';
 import './index.css';
 
@@ -16,6 +17,7 @@ render((
     <Route path="/trips" component={Trips}/>
     <Route path="/trips/new" component={AddTrip}/>
     <Route path="/accommodations" component={Accommodations} />
+    <Route path="/events" component={Events} />
   </Router>
 ), document.getElementById('root'))
 
