@@ -12,9 +12,9 @@ import './index.css';
 
 render((
   <Router history={browserHistory}>
-  	<Route path="/users/:id/friends" component={Friends}/>
-    <Route path="/" component={App} />
+  	<Route path="/users/1/friendships" component={Friends}/>
     <Route path="/users" component={Users}/>
+    <Route path="/" component={App} />
     <Route path="/trips" component={Trips}/>
     <Route path="/trips/new" component={AddTrip}/>
     <Route path="/accommodations" component={Accommodations} />
