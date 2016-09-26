@@ -8,7 +8,7 @@ import './index.css';
 
 render((
   <Router history={browserHistory}>
-  	<Route path="/users/:id/friends" component={Friends}/>
+  	<Route path="/users/1/friendships" component={Friends}/>
     <Route path="/" component={Users}>
       <Route path="/users" component={Users}/>
     </Route>

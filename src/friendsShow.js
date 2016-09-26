@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router';
 import $ from 'jquery';
 
-const URL = "http://localhost:3000/"
+const URL = "http://localhost:3000/";
 
 export default React.createClass({
   getInitialState: function() {
@@ -11,7 +11,7 @@ export default React.createClass({
   },
   loadFriendsFromServer: function() {
     $.ajax({
-      url: "http://localhost:3000/users/1/friends",
+      url: "http://localhost:3000/users/1/friendships",
       dataType: 'json',
       success: function(data) {
         this.setState({data: data});
@@ -20,11 +20,11 @@ export default React.createClass({
         console.error(this.props.url, status, err.toString());
       }.bind(this)
     });
+    console.log(this.state.data);
 },
   // componentDidMount is called after component is rendered for the first time
   componentDidMount: function() {
     this.loadFriendsFromServer();
-    console.log(this.state.data)
     // setInterval(this.loadUsersFromServer, this.props.pollInterval);
   },
   render() {
@@ -39,7 +39,7 @@ export default React.createClass({
     // console.log(friendNodes);
     return (
       <div>
-        <h1>friends</h1>
+        <h1>Friends</h1>
         <ul>
           {friendNodes}
         </ul>
