@@ -33,7 +33,9 @@ export default React.createClass({
     var tripNodes = this.state.data.map(function(trip) {
       return (
         <li key={trip.id}>
-          {trip.name}
+          <Link to={"/trips/" + trip.id}>
+            {trip.name}
+          </Link>
         </li>
       );
     });

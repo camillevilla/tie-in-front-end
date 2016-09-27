@@ -13,8 +13,8 @@ export default React.createClass({
       <div>
         <h1>Welcome to Tie-In</h1>
         <ul>
-          <li><Link to="/user/1/trips">Your Trips</Link></li>
-          <li><Link to="/user/1/trips/new">Add Trip</Link></li>
+          <li><Link to="/users/1/trips">Your Trips</Link></li>
+          <li><Link to="/users/1/trips/new">Add Trip</Link></li>
           <li><Link to="/accommodations">Accommodations List</Link></li>
           <li><Link to="/users/:id/friends">All Friends</Link></li>
           <li><Link to="/events">Events List</Link></li>

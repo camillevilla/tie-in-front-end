@@ -12,9 +12,9 @@ export default React.createClass({
   getInitialState: function() {
     return {data: []};
   },
-  loadTripsFromServer: function() {
+  loadDataFromServer: function() {
     $.ajax({
-      url: URL + "trips",
+      url: URL + "trips/" + this.props.params.id,
       dataType: 'json',
       success: function(data) {
         this.setState({data: data});
@@ -26,23 +26,24 @@ export default React.createClass({
   },
   // componentDidMount is called after component is rendered for the first time
   componentDidMount: function() {
-    this.loadTripsFromServer();
-    // setInterval(this.loadTripsFromServer, this.props.pollInterval);
+    this.loadDataFromServer();
+    // setInterval(this.loadDataFromServer, this.props.pollInterval);
   },
   render() {
-    var tripNodes = this.state.data.map(function(trip) {
-      return (
-        <li key={trip.id}>
-          {trip.name}
-        </li>
-      );
-    });
     return (
       <div>
-        <h1>Trips</h1>
-        <ul id="trips-list">
-          {tripNodes}
-        </ul>
+        <div>
+          <h1>{this.state.data.name}</h1>
+          <p>Location: {this.state.data.location}</p>
+          <p>Description: {this.state.data.description}</p>
+          <p>Start date: {this.state.data.start_date}</p>
+          <p>End date: {this.state.data.end_date}</p>
+        </div>
+        <div>
+          <Link to={"/trips/" + this.state.data.id + "/edit"}>Edit this trip</Link>
+        </div>
+
+
         {this.props.children}
       </div>
     );
